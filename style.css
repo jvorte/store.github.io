@@ -1,0 +1,40 @@
+
+body{
+    background-color:#EAEDED ;
+}
+
+#head-top {
+    background-color: #131921;
+   
+}
+
+#head-down {
+    background-color: #232F3E;
+    
+}
+.nav-link{
+    color: white;
+    
+ }
+ #search-input{
+   padding-right: 700px;
+  
+ }
+ .d-flex{
+    margin-right: 220px;
+ }
+ .carousel-item img{
+max-height: 700px;
+ }
+  
+ .card{
+    float: left;
+    margin-left: 76px;
+    margin-top: -180px;
+    border-radius: 8px;
+   
+ }
+ .card img{
+ width: 190px;
+
+ }
