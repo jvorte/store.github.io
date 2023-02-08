@@ -36,9 +36,32 @@ max-height: 700px;
  }
  .card img{
  width: 190px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
 
  }
+ .card-title {
+    text-align: center;
+ }
+.card a{
+    float:right
+}
+.card a:link,
+      a:visited,
+      a:focus {
+        background: palegoldenrod;
+      
+        }
+ .card a:hover {
+    background: rgb(214, 141, 6);
+  }
 
+  .card a:active {
+    background: rgb(44, 8, 8);
+    color: white;
+  }
  /* ---------------------------------------------------------- */
 
 #college{
