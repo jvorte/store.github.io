@@ -7,7 +7,32 @@ body{
     background-color: #131921;
    
 }
+/* --------------------------------------------------- */
+#user-area{
+border-radius: 6px;
+height: 26px;
+margin: 8px 5px 8px 0;
 
+}
+#pass-area{
+border-radius: 6px;
+height: 26px;
+margin: 8px 5px 8px 0;
+}
+#user-login{
+    color: black;
+    border-radius: 6px;
+    height: 26px;
+    margin: 8px 5px 8px 0;
+   font-size: 12px;
+   text-align: center;
+}
+.sign{
+    color: white;
+    text-decoration: none;
+}
+
+/* ..................................................... */
 #head-down {
     background-color: #232F3E;
     
@@ -26,12 +51,19 @@ body{
  .carousel-item img{
 max-height: 700px;
  }
-  
- .card{
+ /* .....................................................  */
+ #card-cat{
     float: left;
     margin-left: 76px;
-    margin-top: -180px;
+    margin-top: -260px;
     border-radius: 8px;
+   
+ }
+ #card-item{
+    float: left;  
+    border-radius: 8px;
+    margin: 30px 0 30px 0;
+ 
    
  }
  .card img{
@@ -63,7 +95,12 @@ max-height: 700px;
     color: white;
   }
  /* ---------------------------------------------------------- */
+#push-right{
+    margin-right: auto;
+    display: flex;
+}
 
+/* ............................................................ */
 #college{
     padding: 100px;
 }
@@ -77,7 +114,8 @@ max-height: 700px;
     margin-bottom: 40px;
  }
  footer {
-        color: grey;
+    display: flex;
+    color: grey;
  }
  footer p, a {
 font-size: 12px;

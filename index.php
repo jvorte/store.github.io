@@ -1,3 +1,93 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+
+
+// if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+//     header("location: login-conn/welcome.php");
+//     exit;
+// }
+ 
+// Include config file
+require_once "login-conn/config.php";
+ 
+// Define variables and initialize with empty values
+$username = $password = "";
+$username_err = $password_err = $login_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Check if username is empty
+    if(empty(trim($_POST["username"]))){
+        $username_err = "Please enter username.";
+    } else{
+        $username = trim($_POST["username"]);
+    }
+    
+    // Check if password is empty
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter your password.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate credentials
+    if(empty($username_err) && empty($password_err)){
+        // Prepare a select statement
+        $sql = "SELECT id, username, password FROM users WHERE username = :username";
+        
+        if($stmt = $pdo->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            
+            // Set parameters
+            $param_username = trim($_POST["username"]);
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                // Check if username exists, if yes then verify password
+                if($stmt->rowCount() == 1){
+                    if($row = $stmt->fetch()){
+                        $id = $row["id"];
+                        $username = $row["username"];
+                        $hashed_password = $row["password"];
+                        if(password_verify($password, $hashed_password)){
+                            // Password is correct, so start a new session
+                            // session_start();
+                            
+                            // Store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["username"] = $username;                            
+                            
+                            // Redirect user to welcome page
+                            // header("location: welcome.php");
+                        } else{
+                            // Password is not valid, display a generic error message
+                            $login_err = "Invalid username or password.";
+                        }
+                    }
+                } else{
+                    // Username doesn't exist, display a generic error message
+                    $login_err = "Invalid username or password.";
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            unset($stmt);
+        }
+    }
+    
+    // Close connection
+    unset($pdo);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +105,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Logo</a>
             </li>
+          
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
@@ -23,9 +114,58 @@
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" style="color: azure;" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>  
+            <li class="nav-item" id="push-right">
+          
+                               <?php 
+                               if ($_SESSION["username"]==="jvortelinas") {
+                                ?><a href="kids.html">admin</a><?php
+                               }  
+                               elseif ( $_SESSION["username"]="") {
+                                
+                               }
+                               ?>
             </li>
-          </ul>
-    </div>
+            <!-- -----------------------login system---------------------------------------- -->
+            <?php 
+        if(!empty($login_err)){
+            echo '<div class="alert alert-danger">  ' . $login_err . '</div>';
+        }        
+        ?>
+           <li>
+             <div> 
+            <?php 
+            if (isset($_SESSION["loggedin"]) ) {?>          
+              <h6 class="nav-link" >Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?>, Welcome to our site.</h6> 
+          </li>
+                
+            <a href="login-conn/reset-password.php" class="nav-link">Reset Your Password</a> 
+            <a href="login-conn/logout.php" class="nav-link">Sign Out of Your Account</a>
+           
+            <?php 
+           
+          }
+        
+          else {?> 
+         
+           <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">         
+                <input  type="text" name="username"  class="" id="user-area">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                          
+                <input type="password" name="password" class="" id="pass-area">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+         
+                <input type="submit"  value="Login" id="user-login">
+                 <a href="login-conn/register.php" class="sign">Sign up now</a> 
+                       
+          </form><?php }?>  
+
+          </div> 
+   
+          <!-- ----------------------------------end login system------------------------------ -->
+  
+     </ul> 
+   </div>
 
 <div class="container-fluid" id="head-down">
     <nav class="navbar navbar-expand-lg navbar-light" >
@@ -106,7 +246,7 @@
             <div class="container-fluid">
              
               
-                  <div class="card" style="width: 23rem;">                          
+                  <div class="card" id="card-cat" style="width: 23rem;">                          
                         <h5 class="card-title">Mens</h5>
                         <img src="images/market10.jpg" class="card-img-top" alt="...">
                         <div class="card-body">                      
@@ -116,7 +256,7 @@
                   </div>    
               
                 
-                  <div class="card" style="width: 23rem;">                          
+                  <div class="card" id="card-cat"  style="width: 23rem;">                          
                     <h5 class="card-title">΅Womens</h5>
                     <img src="images/market10.jpg" class="card-img-top" alt="...">
                     <div class="card-body">                      
@@ -127,7 +267,7 @@
           
 
 
-              <div class="card" style="width: 23rem;">                          
+              <div class="card" id="card-cat"  style="width: 23rem;">                          
                 <h5 class="card-title">Kids</h5>
                 <img src="images/market10.jpg" class="card-img-top" alt="...">
                 <div class="card-body">                      
@@ -137,7 +277,7 @@
           </div>    
       
 
-          <div class="card" style="width: 23rem;">                          
+          <div class="card" id="card-cat"  style="width: 23rem;">                          
             <h5 class="card-title">Accesorries</h5>
             <img src="images/market10.jpg" class="card-img-top" alt="...">
             <div class="card-body">                      
@@ -146,7 +286,7 @@
             </div>
       </div>    
   
-                 </div>
+    </div>
 
 
              <div class="container overflow-hidden" id="college">
@@ -216,7 +356,8 @@
                                           <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer" >
                                           <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
                                           <p>Use this tool as test data for an automated system or find your next pen</p>
-                                       </div>
+                                                                         
+                                        </div>
                                     </div>
                                     <div class="col-md-6 px-4">
                                        <h6> About Company</h6>
