@@ -1,12 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400&display=swap');
 body{
-    background-color:#EAEDED ;
+    background-color:#F2F2F2 ;
 }
-
-#head-top {
-    background-color: #131921;
+#username{
+    color: #3c3c3c;
+    font-size: 15px;  
+}
+#head-top a{
+    color: #3c3c3c;  
    
 }
+#head-top{
+    background-color: ;
+   
+}
+
+
 /* --------------------------------------------------- */
 #user-area{
 border-radius: 6px;
@@ -33,67 +43,41 @@ margin: 8px 5px 8px 0;
 }
 
 /* ..................................................... */
-#head-down {
-    background-color: #232F3E;
+ #menu-cat{
+    text-transform: uppercase;
+    margin-left: 110px;
+    font-size: 14px;
     
 }
-.nav-link{
-    color: white;
-    
- }
- #search-input{
-   padding-right: 700px;
-  
- }
- .d-flex{
-    margin-right: 220px;
- }
- .carousel-item img{
-max-height: 700px;
- }
+#margin-right{
+    margin-right: 310px;
+}
+
  /* .....................................................  */
- #card-cat{
-    float: left;
-    margin-left: 76px;
-    margin-top: -260px;
-    border-radius: 8px;
-   
+ #center-img {
+    height: 58rem;
+    background-image: url("images/23.jpg");
+    background-position: 25% 75%;
  }
- #card-item{
-    float: left;  
-    border-radius: 8px;
-    margin: 30px 0 30px 0;
+
+ #center-title{
+    color: #F2F2F2;
+    text-transform: uppercase;
+    padding-left: 18rem;
  
-   
+    font-size: 4rem;
+    font-family: 'Archivo Black', sans-serif;
  }
- .card img{
- width: 190px;
- display: block;
- margin-left: auto;
- margin-right: auto;
- width: 50%;
-
+ #center-img button{
+    margin-left: 18rem;
+    font-family: 'Source Sans Pro', sans-serif; 
  }
- .card-title {
-    text-align: center;
+ #small-text{
+    padding-top: 25rem;
+    margin-left: 18rem;
+    font-family: 'Source Sans Pro', sans-serif; 
+    color: #f5f5f5;
  }
-.card a{
-    float:right
-}
-.card a:link,
-      a:visited,
-      a:focus {
-        background: palegoldenrod;
-      
-        }
- .card a:hover {
-    background: rgb(214, 141, 6);
-  }
-
-  .card a:active {
-    background: rgb(44, 8, 8);
-    color: white;
-  }
  /* ---------------------------------------------------------- */
 #push-right{
     margin-right: auto;

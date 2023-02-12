@@ -96,36 +96,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Store</title>
 </head>
 <body>
 
-    <div class="container-fluid" id="head-top">
+    <div class="container" id="head-top">
         <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Logo</a>
+              <a class="nav-link active" aria-current="page" href="#"><span class="material-symbols-outlined">
+home
+</span></a>
             </li>
           
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">
+map
+</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link2</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">
+restaurant_menu
+</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" style="color: azure;" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <li class="nav-item"id="push-right">
+              <a class="nav-link disabled"  href="#" tabindex="-1" aria-disabled="true"><span class="material-symbols-outlined">
+search
+</span></a>
             </li>  
-            <li class="nav-item" id="push-right">
-          
-                               <?php 
-                               if ($_SESSION["username"]==="jvortelinas") {
-                                ?><a href="kids.html">admin</a><?php
-                               }  
-                               elseif ( $_SESSION["username"]="") {
-                                
-                               }
-                               ?>
-            </li>
+      
             <!-- -----------------------login system---------------------------------------- -->
             <?php 
         if(!empty($login_err)){
@@ -136,9 +137,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              <div> 
             <?php 
             if (isset($_SESSION["loggedin"]) ) {?>          
-              <h6 class="nav-link" >Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?>, Welcome to our site.</h6> 
+              <h6 class="nav-link" id="username">Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?>, Welcome to our site.</h6> 
           </li>
-                
+          <?php 
+                               if ($_SESSION["username"]==="jvortelinas") {
+                                ?><a href="admin/index.php">admin</a><?php
+                               }  
+                               elseif ( $_SESSION["username"]=="") {
+                                
+                               }
+                               ?>  
             <a href="login-conn/reset-password.php" class="nav-link">Reset Your Password</a> 
             <a href="login-conn/logout.php" class="nav-link">Sign Out of Your Account</a>
            
@@ -165,128 +173,56 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <!-- ----------------------------------end login system------------------------------ -->
   
      </ul> 
-   </div>
-
-<div class="container-fluid" id="head-down">
-    <nav class="navbar navbar-expand-lg navbar-light" >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#" style="color: azure;">Menu</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="color: azure;" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link"  href="#" style="color: azure;">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color: azure;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" style="color: azure;" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="" aria-label="Search" id="search-input">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="color: azure;" href="#">See All Details</a>
-                  </li>           
-
-              </div>
-            </div>
-          </nav>
-        </div>
-  <!-- --1---------------------------------------------------------------------------------- -->
    
 
-        <!--1 ------------------------------------------------------------------------------------ -->
+   </div>
 
-          <!-- -2----------------------------------------------------------------------------------- -->
-    <div class="container">
-         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">                
-                <img src="images/market4.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/market2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/market3.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+   <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container">
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" id="menu-cat" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="menu-cat" >Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="menu-cat" >Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="menu-cat" >Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="menu-cat" >Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" id="menu-cat" tabindex="1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- --1---------------------------------------------------------------------------------- -->
+
+        <!--1 ------------------------------------------------------------------------------------ -->
+        <div id="center-img">
+
+         <h6 id="small-text" >your dream days</h6>
+         <h1 id="center-title">book your next <br>Vacations </h1>        
+         <button type="button" class="btn btn-light">Book now</button>
         </div>
+          <!-- -2----------------------------------------------------------------------------------- -->
+       
+  
+      
          
 
             <!-- -2----------------------------------------------------------------------------------- -->
 
                  <!-- -3----------------------------------------------------------------------------------- -->
-            <div class="container-fluid">
-             
-              
-                  <div class="card" id="card-cat" style="width: 23rem;">                          
-                        <h5 class="card-title">Mens</h5>
-                        <img src="images/market10.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">                      
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a  href="men.html" class="btn ">Visit Category</a>
-                        </div>
-                  </div>    
-              
-                
-                  <div class="card" id="card-cat"  style="width: 23rem;">                          
-                    <h5 class="card-title">΅Womens</h5>
-                    <img src="images/market10.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">                      
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a  href="women.html" class="btn ">Visit Category</a>
-                    </div>
-              </div>    
           
-
-
-              <div class="card" id="card-cat"  style="width: 23rem;">                          
-                <h5 class="card-title">Kids</h5>
-                <img src="images/market10.jpg" class="card-img-top" alt="...">
-                <div class="card-body">                      
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a  href="kids.html" class="btn ">Visit Category</a>
-                </div>
-          </div>    
-      
-
-          <div class="card" id="card-cat"  style="width: 23rem;">                          
-            <h5 class="card-title">Accesorries</h5>
-            <img src="images/market10.jpg" class="card-img-top" alt="...">
-            <div class="card-body">                      
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a  href="accesorries.html" class="btn ">Visit Category</a>
-            </div>
-      </div>    
-  
-    </div>
 
 
              <div class="container overflow-hidden" id="college">
