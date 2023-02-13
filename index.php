@@ -99,7 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <title>Store</title>
+    <title>Camping</title>
 </head>
 <body>
 
@@ -167,17 +167,17 @@ search
                  <a href="login-conn/register.php" class="sign">Sign up now</a> 
                        
           </form><?php }?>  
-
-          </div> 
+       
+        </div> 
    
-          <!-- ----------------------------------end login system------------------------------ -->
-  
-     </ul> 
-   
-
+          </ul> 
    </div>
 
-   <nav class="navbar navbar-expand-lg navbar-light ">
+
+  
+ <!-- ----------------------------------end login system------------------------------ -->
+   <!-- ----------------------------------menu------------------------------ -->    
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
    
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -204,8 +204,36 @@ search
     </div>
   </div>
 </nav>
+ <!-- ----------------------------------end menu------------------------------ -->
   <!-- --1---------------------------------------------------------------------------------- -->
+  <a class="btn btn-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href
+</a>
+<button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-bs-target
+</button>
 
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
         <!--1 ------------------------------------------------------------------------------------ -->
         <div id="center-img">
 
@@ -352,7 +380,7 @@ search
                         <!-- Credit to https://bootsnipp.com/snippets/M56El  -->
                         <!-- -4----------------------------------------------------------------------------------- -->
              
-              
+        
 <!-- footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
