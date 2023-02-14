@@ -103,45 +103,83 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 
-    <div class="container" id="head-top">
+
+
+<div class="container-fluid" id="head-top" >
+      
         <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><span class="material-symbols-outlined">
-home
-</span></a>
+              <a class="nav-link active" aria-current="page" href="#"><span class="material-symbols-outlined">home</span>Home</a>
             </li>
           
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">map</span>Map</a>
+            </li> -->
+
             <li class="nav-item">
-              <a class="nav-link" href="#"><span class="material-symbols-outlined">
-map
-</span></a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">camping</span>Tent</a>
             </li>
+
+            
             <li class="nav-item">
-              <a class="nav-link" href="#"><span class="material-symbols-outlined">
-restaurant_menu
-</span></a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">cabin</span>Bangalows</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">airport_shuttle</span>Rv's</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">rv_hookup</span>Mobile Home</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">restaurant_menu</span>restaurant</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">directions_bus</span>Airport Shuttle</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">pets</span>Pets Free</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">wifi</span>Free Wifi</a>
+            </li>
+
+              <li class="nav-item">
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">photo_camera</span>Gallery</a>
+            </li>
+             
+         
             <li class="nav-item"id="push-right">
-              <a class="nav-link disabled"  href="#" tabindex="-1" aria-disabled="true"><span class="material-symbols-outlined">
-search
-</span></a>
+              <a class="nav-link "  href="#" tabindex="-1" aria-disabled="true"><span class="material-symbols-outlined">search</span>Search</a>
             </li>  
+      <!-- ----------alert message----------------- -->
+      <?php 
+            if(!empty($login_err)){
+                echo '<div class="alert-message">  ' . $login_err . '</div>';      
+              }        
+            ?>
+      <!-- ---------end-alert message----------------- -->
+           
       
             <!-- -----------------------login system---------------------------------------- -->
-            <?php 
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">  ' . $login_err . '</div>';
-        }        
-        ?>
+      
            <li>
              <div> 
+              
             <?php 
             if (isset($_SESSION["loggedin"]) ) {?>          
               <h6 class="nav-link" id="username">Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?>, Welcome to our site.</h6> 
           </li>
+      
           <?php 
                                if ($_SESSION["username"]==="jvortelinas") {
-                                ?><a href="admin/index.php">admin</a><?php
+                                ?><a href="admin/index.php" id="admin">Admin</a><?php
                                }  
                                elseif ( $_SESSION["username"]=="") {
                                 
@@ -155,6 +193,7 @@ search
           }
         
           else {?> 
+          
          
            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">         
                 <input  type="text" name="username"  class="" id="user-area">
@@ -169,15 +208,16 @@ search
           </form><?php }?>  
        
         </div> 
-   
-          </ul> 
+   </ul> 
    </div>
 
 
-  
  <!-- ----------------------------------end login system------------------------------ -->
+
+
    <!-- ----------------------------------menu------------------------------ -->    
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+   <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
    
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -203,11 +243,13 @@ search
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
  <!-- ----------------------------------end menu------------------------------ -->
+
+
   <!-- --1---------------------------------------------------------------------------------- -->
-  <a class="btn btn-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-  Link with href
+  <!-- <a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+ something
 </a>
 <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
   Button with data-bs-target
@@ -233,13 +275,16 @@ search
       </ul>
     </div>
   </div>
-</div>
+</div> -->
+
+
+
         <!--1 ------------------------------------------------------------------------------------ -->
         <div id="center-img">
 
-         <h6 id="small-text" >your dream days</h6>
+            <h6 id="small-text" >your dream days</h6>
          <h1 id="center-title">book your next <br>Vacations </h1>        
-         <button type="button" class="btn btn-light">Book now</button>
+         <button type="button" class="btn btn-light"id="book-btn"><a href="" >Book now</a> </button>
         </div>
           <!-- -2----------------------------------------------------------------------------------- -->
        
