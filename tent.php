@@ -110,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       
         <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><span class="material-symbols-outlined">home</span>Home</a>
+              <a class="nav-link active" aria-current="page" href="index.php"><span class="material-symbols-outlined">home</span>Home</a>
             </li>
           
             <!-- <li class="nav-item">
@@ -214,130 +214,86 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
  <!-- ----------------------------------end login system------------------------------ -->
+  <!-- --1---------------------------------------------------------------------------------- -->
+  <div class="container-fluid" id="tent-top">
 
+  </div>
+<!--1 ------------------------------------------------------------------------------------ -->
 
-   <!-- ----------------------------------menu------------------------------ -->    
+<div class="container">
+  <div class="row">
+
+   <h1 id="title">Campingplatz</h1>
+
+   <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>   
+    <li class="breadcrumb-item active" aria-current="page">Tent</li>
+  </ol>
+  </nav>
    
-   <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-   
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" id="menu-cat" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="menu-cat" >Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="menu-cat" >Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="menu-cat" >Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="menu-cat" >Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#" id="menu-cat" tabindex="1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+    <div class="col-6" id="tent-p">
+      
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sit nihil pariatur laboriosam esse. Hic, fugit ducimus nesciunt eos ea culpa quis officia error accusamus repellat veritatis nisi asperiores deleniti iure quo aliquam mollitia. Accusamus adipisci, facilis non, unde impedit voluptas expedita aliquid suscipit provident error ipsa at laborum fuga.</p>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" id="carousel-img">
+      <img src="images/25.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" id="carousel-img">
+      <img src="images/26.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item"id="carousel-img">
+      <img src="images/8.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
-</nav> -->
- <!-- ----------------------------------end menu------------------------------ -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+    <div class="col-6"id="tent-p">
+      
+    <p>Lorem ipsum dolor sit aboriosam esse. Hic, fugit ducimus nesciunt eos ea culpa quis officia error accusamus repellat veritatis nisi asperiores deleniti iure quo aliquam mollitia. Accusamus adipisci, facilis non, unde impedit voluptas expedita aliquid suscipit provident error ipsa at laborum fuga.</p>
+<!-- -------------------book button-------------------------------- -->
+<button class="btn btn-danger" id="bookt-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Book Now</button>
 
-
-  <!-- --1---------------------------------------------------------------------------------- -->
-  <!-- <a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
- something
-</a>
-<button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Button with data-bs-target
-</button>
-
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-    </div>
-    <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-  </div>
-</div> -->
-
-
-
-        <!--1 ------------------------------------------------------------------------------------ -->
-        <div id="center-img">
-
-            <h6 id="small-text" >your dream days</h6>
-         <h1 id="center-title">book your next <br>Vacations </h1>        
-         <button type="button" class="btn btn-light"id="book-btn"><a href="" >Book now</a> </button>
-        </div>
-          <!-- -2----------------------------------------------------------------------------------- -->
-       
-  
-            <!-- -2----------------------------------------------------------------------------------- -->
-
-                 <!-- -3----------------------------------------------------------------------------------- -->
-          
-
-
-    <div class="container overflow-hidden" id="college">
-
-       <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="images/2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/21.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/19.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
+    ...
   </div>
 </div>
+<!-- ----------------end---book button-------------------------------- -->
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item" id="list"><span class="material-symbols-outlined">shower</span> <b> Lorem ipsum dolor sit ametcing elit. Vero, eum.</b> </li>
+  <li class="list-group-item"id="list"><span class="material-symbols-outlined">baby_changing_station</span> <b> Lorem ipsum dolor s adipisicing elit. Vero, eum.</b></li>
+  <li class="list-group-item"id="list"><span class="material-symbols-outlined">wash</span> <b> Lorem ipsum dolordipisicing elit. Vero, eum.</b> </li>  
+  <li class="list-group-item"id="list"><span class="material-symbols-outlined">family_restroom</span> <b> Lorem ipsum dolor sit amcing elit. Vero, eum.</b> </li>
+  <li class="list-group-item"id="list"><span class="material-symbols-outlined">wc</span> <b> Lorem ipsum dolor sit ing elit. Vero, eum.</b> </li>
+  
+  </ul>
+    </div>
+  </div>
 
-             </div>
+</div>
+          <!-- -2----------------------------------------------------------------------------------- -->
+       
                     <!-- -3----------------------------------------------------------------------------------- -->
 
                       <!-- -4----------------------------------------------------------------------------------- -->
@@ -351,8 +307,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                           <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer" >
                                           <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
                                           <p>Use this tool as test data for an automated system or find your next pen</p>
-                                                                         
-                                        </div>
+                                       </div>
                                     </div>
                                     <div class="col-md-6 px-4">
                                        <h6> About Company</h6>
@@ -411,7 +366,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <!-- Credit to https://bootsnipp.com/snippets/M56El  -->
                         <!-- -4----------------------------------------------------------------------------------- -->
              
-        
+              
 <!-- footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
