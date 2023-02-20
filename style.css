@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
 body{
     background-color:#F2F2F2 ;
 }
@@ -8,7 +11,10 @@ body{
     background-color: #ee7c4b;
     border-radius: 5px;
 }
+/* *************symbols**************** */
 
+
+/* *************symbols**************** */
 
 #username{
     color: #3c3c3c;
@@ -21,6 +27,16 @@ body{
 #head-top{
     background-color: ;
    
+}
+#top{
+    text-align: center;
+ 
+}
+#top a{
+    text-decoration: none;
+    font-family: 'poppins';
+    font-size: 20px;
+    color: #3c3c3c;
 }
 /* ============================ADMIN============================================== */
 #admin {
@@ -67,6 +83,12 @@ margin: 8px 5px 8px 0;
      color: red;
      margin: 8px 5px 0 0;
 }
+.logo-top {
+    font-family: 'Mynerve', cursive;
+    margin: 9px 5px 0 0;
+    color: #c24c1a;
+    font-size: 27px;
+     }
 
 /* ..................................................... */
  #menu-cat{
@@ -94,23 +116,39 @@ margin: 8px 5px 8px 0;
     font-size: 4rem;
     font-family: 'Archivo Black', sans-serif;
  }
- #center-img button{
-    margin-left: 18rem;
+ /* #center-img button{
+    margin-top: 2rem;
     font-family: 'Source Sans Pro', sans-serif; 
- }
+ } */
  #small-text{
     padding-top: 25rem;
     margin-left: 18rem;
-    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'Mynerve', cursive;
     color: #f5f5f5;
- }
- #book-btn a{
-    text-decoration: none;
-    font-family: 'Source Sans Pro', sans-serif; 
-    color: #232323;
-    font-size: 15px;
+    font-size: 18px;
  }
  
+ #book-btn a{
+    text-decoration: none;
+    font-family: 'Mynerve', cursive;
+    color: #232323;
+    font-size: 18px;
+ }
+ #center-img button{
+    margin-left: 18rem;
+       font-size: 18px;
+ }
+ 
+
+  #select{
+    margin: 0 0 0 18rem;
+  }
+  #form-label-first{
+    color: #f5f5f5;
+    font-family: 'Source Sans Pro', sans-serif; 
+  }
+
+  
  /* ---------------------------------------------------------- */
 #push-right{
     margin-right: auto;
@@ -118,27 +156,89 @@ margin: 8px 5px 8px 0;
 }
 
 /* ............................................................ */
-#college{
+
+#college1{
     padding: 100px;
+}
+#college1 h1{
+    text-align: center;
+    font-family: 'Mynerve', cursive;
+ }
+
+#college2{
+    padding: 100px;
+}
+#college2 h1{
+   text-align: center;
+   font-family: 'Mynerve', cursive;
+}
+ 
+#college3{
+    padding: 100px;
+}
+#college3 h1{
+   text-align: center;
+   font-family: 'Mynerve', cursive;
+   font-size: 80px;
+}
+#college3 img{
+ width: 600px;
+ border-radius: 8px;
+ 
+}
+#college3 p{
+    padding-top: 20px;
+  font-family: 'poppins';
+  text-align: center;
+   }
+
+
+#college4{
+    padding: 100px;
+}
+#college4 h1{
+    text-align: center;
+    font-family: 'Mynerve', cursive;
+ }
+
+#card-cat{
+    box-shadow: 5px 5px 5px rgb(192, 189, 189);
+    border-radius: 11px;
+}
+#card-cat h4{
+    text-align: center;
+    font-family: 'Mynerve', cursive;
+}
+#card-cat p{
+    text-align: center;
+    font-family: 'poppins';
+}
+
+#book-link{
+    font-family: 'Mynerve', cursive;
+    font-size: 17px;
+    float: right;
 }
 /* ------------------------------tent------------------------------------------------- */
 #tent-top{
 background-image: url(images/12.jpg);
-height: 500px;
-background-position: 25% 35%;
+height: 300px;
+background-position: 15% 45%;
 }
 #title{
     text-align: center;
-    margin: 40px 0 40px 0;
-    font-family: 'Poppins', sans-serif;
+    margin: 10px 0 20px 0;
+    font-family: 'Mynerve', cursive;
 }
 #tent-p{
     font-family: 'Source Sans Pro', sans-serif; 
     font-size: large;
-    margin: 40px 0 100px 0;
+    margin: 30px 0 80px 0;
 }
 .list-group-item{
     background-color:#F2F2F2 ;
+    font-family: 'poppins';
+    font-size: 18px;
 }
 #list{
     margin: 16px 0 10px 0;
@@ -164,6 +264,7 @@ background-position: 25% 35%;
  }
  .logo-footer {
     margin-bottom: 40px;
+     font-family: 'Mynerve', cursive;
  }
  footer {
     display: flex;

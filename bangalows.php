@@ -11,7 +11,7 @@ session_start();
 // }
  
 // Include config file
-require_once "../login-conn/config.php";
+require_once "login-conn/config.php";
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="shortcut icon" type="image/x-icon" href="images/camping.png" /> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -110,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       
         <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.php"><span class="material-symbols-outlined">home</span>Home</a>
+              <a class="nav-link active" aria-current="page" href="index.php"><span class="material-symbols-outlined">home</span>Home</a>
             </li>
           
             <!-- <li class="nav-item">
@@ -123,36 +123,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             
             <li class="nav-item">
-              <a class="nav-link" href="../bangalows.php"><span class="material-symbols-outlined">cabin</span>Bangalows</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">cabin</span>Bangalows</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../rvs.php"><span class="material-symbols-outlined">airport_shuttle</span>Rv's</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">airport_shuttle</span>Rv's</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../mobile.php"><span class="material-symbols-outlined">rv_hookup</span>Mobile Home</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">rv_hookup</span>Mobile Home</a>
             </li>
 
 
             <li class="nav-item">
-              <a class="nav-link" href="../restaurant.php"><span class="material-symbols-outlined">restaurant_menu</span>restaurant</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">restaurant_menu</span>restaurant</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../shuttle.php"><span class="material-symbols-outlined">directions_bus</span>Airport Shuttle</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">directions_bus</span>Airport Shuttle</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../pets.php"><span class="material-symbols-outlined">pets</span>Pets Free</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">pets</span>Pets Free</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../wifi.php"><span class="material-symbols-outlined">wifi</span>Free Wifi</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">wifi</span>Free Wifi</a>
             </li>
 
               <li class="nav-item">
-              <a class="nav-link" href="../gallery.php"><span class="material-symbols-outlined">photo_camera</span>Gallery</a>
+              <a class="nav-link" href="#"><span class="material-symbols-outlined">photo_camera</span>Gallery</a>
             </li>
              
          
@@ -242,13 +242,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" id="carousel-img">
-      <img src="../images/25.jpg" class="d-block w-100" alt="...">
+      <img src="images/25.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item" id="carousel-img">
-      <img src="../images/26.jpg" class="d-block w-100" alt="...">
+      <img src="images/26.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item"id="carousel-img">
-      <img src="../images/8.jpg" class="d-block w-100" alt="...">
+      <img src="images/8.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
